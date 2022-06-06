@@ -1,4 +1,4 @@
-#include "philo.h"
+#include "Includes/philo.h"
 
 void	ft_init_philos(t_data *data)
 {
@@ -43,6 +43,9 @@ void	*philosopher(void *voidPhilo)
 
 	philo = (t_philo *)voidPhilo;
 	philo->last_meal_time = ft_get_time();
+	pthread_mutex_lock(&philo->data->print_lock);
+	printf("%i made\n",philo->id);
+	pthread_mutex_unlock(&philo->data->print_lock);
 	if (philo->id % 2 == 0)
 		usleep(philo->data->time_to_eat / 2 * 1000);
 	while (philo->data->dead == 0 && philo->times_eaten

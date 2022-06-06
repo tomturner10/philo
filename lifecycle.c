@@ -1,4 +1,4 @@
-#include "philo.h"
+#include "Includes/philo.h"
 
 void	ft_check_dead(t_philo *philo)
 {

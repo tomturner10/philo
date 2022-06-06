@@ -1,4 +1,4 @@
-#include "philo.h"
+#include "Includes/philo.h"
 
 static int	ft_isspace(char c)
 {

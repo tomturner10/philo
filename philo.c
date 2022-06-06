@@ -1,4 +1,4 @@
-#include "philo.h"
+#include "Includes/philo.h"
 
 void	ft_check_death(t_data *data)
 {
@@ -34,7 +34,7 @@ void	ft_status(t_data *data)
 		all_full = 1;
 		while (i < data->number_of_philo && all_full == 1)
 			all_full = data->philo[i++].full;
-		if (i == data->number_of_philo - 1)
+		if (i == data->number_of_philo - 1 && all_full == 1)
 			ft_clean_exit(data);
 		ft_check_death(data);
 	}

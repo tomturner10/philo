@@ -1,4 +1,4 @@
-#include "philo.h"
+#include "Includes/philo.h"
 
 unsigned long	ft_get_time(void)
 {
